@@ -1,5 +1,5 @@
 from math import sqrt
-import sqrt as rsqrt
+import problems.sqrt as rsqrt
 from random import randint
 import unittest
 

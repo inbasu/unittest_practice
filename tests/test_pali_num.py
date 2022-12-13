@@ -1,4 +1,4 @@
-import pali_num
+import problems.pali_num as pali_num
 from random import randint
 import unittest
 
