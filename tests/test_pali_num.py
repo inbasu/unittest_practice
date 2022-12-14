@@ -8,22 +8,33 @@ class TestPalindrom(unittest.TestCase):
         self.pali = pali_num.Solution()
 
     def test_zero(self):
-        self.assertEqual(self.pali.isPalindrome(0), True)
+        self.assertTrue(
+            self.pali.isPalindrome(0),
+            msg=f"{0}",
+        )
 
     def test_negative_nums(self):
         nums = (-1, -121, -113)
         for num in nums:
-            self.assertFalse(self.pali.isPalindrome(num))
+            self.assertFalse(
+                self.pali.isPalindrome(num),
+                msg=f"{num}",
+            )
 
     def test_palinom_nums(self):
         nums = (123321, 1, 11, 121)
         for num in nums:
-            self.assertTrue(self.pali.isPalindrome(num))
+            self.assertTrue(
+                self.pali.isPalindrome(num),
+                msg=f"{num}",
+            )
 
     def test_non_palinom_nums(self):
         nums = (13, 12345321, 10)
         for num in nums:
-            self.assertFalse(self.pali.isPalindrome(num))
+            self.assertFalse(
+                self.pali.isPalindrome(num),
+            )
 
     def test_randome(self):
 

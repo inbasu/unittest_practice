@@ -14,18 +14,30 @@ class TestSqrt(unittest.TestCase):
     def test_right_sqrt(self):
         nums = (1, 4, 8, 65)
         for num in nums:
-            self.assertEqual(self.sqrt.mySqrt(num), int(sqrt(num)))
+            self.assertEqual(
+                self.sqrt.mySqrt(num),
+                int(sqrt(num)),
+                msg=f"{num}",
+            )
 
     def test_bad_sqrt(self):
         nums = (1, 4, 8, 65)
         for num in nums:
-            self.assertNotEqual(self.sqrt.mySqrt(num), int(sqrt(num) + 1))
+            self.assertNotEqual(
+                self.sqrt.mySqrt(num),
+                int(sqrt(num) + 1),
+                msg=f"{num}",
+            )
 
     def test_randome(self):
         test = 10
         for _ in range(test):
             num = randint(0, 999_999)
-            self.assertEqual(self.sqrt.mySqrt(num), int(sqrt(num)))
+            self.assertEqual(
+                self.sqrt.mySqrt(num),
+                int(sqrt(num)),
+                msg=f"{num}",
+            )
 
     def test_negative_sqrt(self):
         # Exception test

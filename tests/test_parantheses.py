@@ -18,7 +18,10 @@ class TestParantheses(unittest.TestCase):
             "sometext",
         )
         for pattern in patterns:
-            self.assertTrue(self.paren.isValid(pattern))
+            self.assertTrue(
+                self.paren.isValid(pattern),
+                msg=f"{pattern}",
+            )
 
     def test_bad(self):
         patterns = (
@@ -30,7 +33,10 @@ class TestParantheses(unittest.TestCase):
             "[some(text]",
         )
         for pattern in patterns:
-            self.assertFalse(self.paren.isValid(pattern))
+            self.assertFalse(
+                self.paren.isValid(pattern),
+                msg=f"{pattern}",
+            )
 
 
 if __name__ == "__main__":
