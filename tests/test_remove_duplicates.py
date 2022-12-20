@@ -3,7 +3,7 @@ from random import randint
 import unittest
 
 
-class TestlengthOfLastWord(unittest.TestCase):
+class TestRemoveDiplicates(unittest.TestCase):
     def setUp(self):
         self.remove_duplicates = remove_duplicates.Solution()
 

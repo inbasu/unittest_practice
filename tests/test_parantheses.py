@@ -1,4 +1,3 @@
-from .logger import *
 import problems.parentheses as parentheses
 import unittest
 
